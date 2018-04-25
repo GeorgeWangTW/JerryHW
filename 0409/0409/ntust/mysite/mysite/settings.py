@@ -20,7 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = 'z^t5%(z)mpvi2xbq6e^j6!!+f+$h=*)o66vym05t3zkapv)1zf'
+=======
+SECRET_KEY = 'hs+b$(2&#gj&%d+_hbh&c)*s3es1ncylbn_wu_&tvgydak87r8'
+>>>>>>> 28f2046a3352bf03dba14a7cf5b7f7eb35ff7442
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,7 +35,11 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+<<<<<<< HEAD
     'George.apps.GeorgeConfig',
+=======
+    'polls.apps.PollsConfig',
+>>>>>>> 28f2046a3352bf03dba14a7cf5b7f7eb35ff7442
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -106,7 +114,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
+<<<<<<< HEAD
 TIME_ZONE = 'Asia/Taipei'
+=======
+TIME_ZONE = 'Asia/Taiwan'
+>>>>>>> 28f2046a3352bf03dba14a7cf5b7f7eb35ff7442
 
 USE_I18N = True
 

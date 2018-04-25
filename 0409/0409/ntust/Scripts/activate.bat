@@ -1,5 +1,9 @@
 @echo off
+<<<<<<< HEAD
 set "VIRTUAL_ENV=C:\Users\GeorgeWang\Desktop\0409\ntust"
+=======
+set "VIRTUAL_ENV=C:\Users\hsiang\Desktop\0409\ntust"
+>>>>>>> 28f2046a3352bf03dba14a7cf5b7f7eb35ff7442
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
