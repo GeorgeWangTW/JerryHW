@@ -1,0 +1,40 @@
+<title>母親節留言版</title>
+<body>
+	 <div class="col-md-4">
+          <div class="mainDiv">
+             <h3>留言</h3> <!--h1-> h6-->
+              <!--method: POST /GET -->
+              <form action="mothers_day/writing" method="GET" novalidate="novalidate">
+              {% csrf_token %}
+                  <table class="table table-striped table-bordered table-hover table-condensed">
+                      <label>用戶名:</label><br /><input type="text" name="author" /> <br /><br />
+                      <label>標  題:</label><br /><input type="text" name="title" /><br /><br />
+                      <label>内  容:</label><br /><textarea name="content"  style="resize: none;"> </textarea><br /><br />
+                  </table>
+                  <input class="btn btn-success" type="submit" value="留言"/>
+              </form>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row ">
+        <div class="col-md-8">
+          <div class="mainDiv">
+                {% for m in mg %}
+           <div class="row say_once">
+            <div class="col-md-2" style="text-align: center;">
+                <br>
+                {{ m.author }}
+             </div>
+            <div class="col-md-10" >
+              <font class="title">{{  m.title }}</font>  (<font class="time">{{ m.publish }}</font>)<br>
+              <div style="padding-left: 20px; padding-top: 6px;">{{ m.content }}</div>
+              
+             </div>
+           </div>
+           {% endfor %}
+         </div>
+        </div>
+  </body>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>George Blog</title>
+</head>
+<body style="background-color:#F5F5DC ">
+	<h1 align="center">George Blog</h1>
+		<h4 align="right"><a href="/blog/">首頁</a>/<a href="/blog/add/">新增文章</a></h4>
+<hr>
+{% for post in posts %}
+        <div>
+           	<h1>{{ post.title }}</h1><h4 align="right">author:{{post.author}}</h4>
+           	<p>{{ post.text|linebreaksbr }}</p> 
+            <p>published: {{ post.published_date }}<h4 align="right"><a href="/blog/edit/?id={{post.id}}">編輯</a>/<a href="/blog/delete/?id={{post.id}}">刪除</a></h4</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
+
+
+
