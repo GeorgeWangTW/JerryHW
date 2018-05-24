@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body align="center">
+<form>
+請輸入數字:<br>
+<input type="number" name="number" value=0 id="num"><br>
+<input type="button" value="+" onClick="operation('+')">
+<td> <input type="button" value="-" onClick="operation('-')">
+<td> <input type="button" value="*" onClick="operation('*')">
+<td> <input type="button" value="/" onClick="operation('/')">
+<td> <input  type="button" value="=" onClick="equal()"> 
+<td> <input type="reset" value="清除">
+</form>
+<script>
+var number
+var operator
+function operation(str){
+	equal();
+	num1=document.getElementById("num").value;
+	operator=str;
+	document.getElementById("num").value=0;
+}
+function equal(){
+	switch(operator){
+		case '+':
+		document.getElementById("num").value=parseFloat(num1)+parseFloat(document.getElementById("num").value);
+			break;
+		case '-':
+		document.getElementById("num").value=parseFloat(num1)-parseFloat(document.getElementById("num").value);
+		case '*':
+		document.getElementById("num").value=parseFloat(num1)*parseFloat(document.getElementById("num").value);
+			break;
+		case '/':
+		document.getElementById("num").value=parseFloat(num1)/parseFloat(document.getElementById("num").value);
+			break;
+		default:
+ 			break;
+	}
+} 
+</script>
+<br>
+<br>成績檢查
+<br><input type="text" name="score"  id="score"><br>
+<input  type="button" value="submit" onClick="score()">
+<p id="output">
+<script>
+var score
+function score(){
+	score=document.getElementById("score").value
+	if(score>100&&score<0){
+		document.getElementById('output').innerHTML = ("錯誤輸入")
+		}else{ 
+			if (score>59) {
+				document.getElementById('output').innerHTML =("及格")
+			}else{
+				document.getElementById('output').innerHTML =("不及格")
+			}
+			}
+	
+		
+}	
+</script>
+</body>
+</html>
